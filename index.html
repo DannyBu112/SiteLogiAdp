@@ -7,11 +7,41 @@
     body {
       text-align: center;
       padding-top: 50px;
+      margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
     }
     
     h1 {
-      color: #333;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .content {
+      text-align: center;
+    }
+    
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+    
+    .logo {
+      margin-bottom: 10px;
+    }
+    
+    .logo img {
+      max-width: 80px;
+      height: auto;
     }
     
     .photo {
@@ -19,18 +49,27 @@
       margin: 20px;
       width: 100%;
       max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+    
+    .photo:hover {
+      transform: translateY(-5px);
     }
     
     .photo img {
       width: 100%;
       height: auto;
-      border: 2px solid #333;
-      border-radius: 5px;
       cursor: pointer;
     }
     
     .photo p {
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 18px;
+      color: #666;
     }
     
     @media screen and (min-width: 600px) {
@@ -38,23 +77,43 @@
         width: auto;
       }
     }
+    
+    @media screen and (max-width: 600px) {
+      .logo img {
+        max-width: 60px;
+      }
+      
+      .photo {
+        width: auto;
+        margin: 20px auto;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Școlile noastre</h1>
   
-  <div class="photo">
-    <a href="https://www.logiscool.com/ro/locations/craiova-traian/open-days" target="_blank">
-      <img src="https://assets.logiscool.com/f/57188/720x405/982789fff3/lsc_craiova_imp-traian_ext_.jpeg" alt="First Photo">
-    </a>
-    <p>Str. Împărtul Traian Nr.25</p>
+  <div class="content">
+    <div class="photo">
+      <a href="https://www.logiscool.com/ro/locations/craiova-traian/open-days" target="_blank">
+        <img src="https://assets.logiscool.com/f/57188/720x405/982789fff3/lsc_craiova_imp-traian_ext_.jpeg" alt="First Photo">
+      </a>
+      <p>Str. Împărtul Traian Nr. 25</p>
+    </div>
+    
+    <div class="photo">
+      <a href="https://www.logiscool.com/ro/locations/craiova/open-days" target="_blank">
+        <img src="https://assets.logiscool.com/f/57188/720x405/389b4421ff/lsc_craiova-madona-dudu_ext_.jpeg" alt="Second Photo">
+      </a>
+      <p>Str. Madona Dudu Nr. 35</p>
+    </div>
   </div>
   
-  <div class="photo">
-    <a href="https://www.logiscool.com/ro/locations/craiova/open-days" target="_blank">
-      <img src="https://assets.logiscool.com/f/57188/720x405/389b4421ff/lsc_craiova-madona-dudu_ext_.jpeg" alt="Second Photo">
-    </a>
-    <p>Str. Madona Dudu Nr.35</p>
-  </div>
+  <footer class="footer">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <p>&copy; 2023 Logiscool Craiova. All rights reserved.</p>
+  </footer>
 </body>
 </html>
