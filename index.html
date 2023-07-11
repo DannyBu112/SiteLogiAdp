@@ -83,11 +83,18 @@
         max-width: 60px;
       }
       
-      .photo {
-        width: auto;
-        margin: 20px auto;
-        clear: both;
-      }
+      .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .photo {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    clear: both;
+  }
       
       .photo:nth-child(odd) {
         clear: left;
